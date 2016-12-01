@@ -4,7 +4,7 @@
 
 var compression = require('compression');
 
-module.exports = function(opts){
+module.exports = function(){
     var cacheData = {};
     var compressionMiddleware = compression({level: 9});
 
@@ -33,6 +33,7 @@ module.exports = function(opts){
             };
             res.write = write;
             res.end = end;
+
             //set compression middleware
             compressionMiddleware(req, res, emptyFunc);
         }
@@ -55,7 +56,6 @@ module.exports = function(opts){
         chunk && this.__cache.data.chunksData.push([chunk, encoding]);
         this.__cache.data.headers = this._headers;
         cacheData[this.__cache.path] = this.__cache.data;
-
         this.__cache.end.call(this, chunk, encoding);
     }
 

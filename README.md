@@ -1,7 +1,7 @@
 # serve-static-with-cache
 
 This is a fork of [expressjs/serve-static](https://github.com/expressjs/serve-static).
-Adds caching files in memory. Also compresses files before caching. If you use 'compression' middleware for other requests, for the correct operation is necessary to add 'serve-static-with-cache' middleware before 'compression' middleware.
+Adds caching files in memory. Also compresses files before caching. 
 
 ## Install
 
