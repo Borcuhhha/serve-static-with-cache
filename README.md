@@ -9,12 +9,12 @@ Installation is done using the
 [`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
 ```sh
-$ npm install git+https://github.com/Borcuhhha/serve-static-with-cache.git
+$ npm install serve-static-with-cache
 ```
 
 
 ```js
 var cachedServeStatic = require('serve-static-with-cache');
-express.user(cachedServeStatic(pathToStaticFiles));
+express.use(cachedServeStatic(pathToStaticFiles));
 ```
 

@@ -1,10 +1,13 @@
 {
   "name": "serve-static-with-cache",
-  "description": "Serve static files",
-  "version": "1.11.1",
-  "author": "Douglas Christopher Wilson <doug@somethingdoug.com>",
+  "description": "Serve static files+cache",
+  "version": "1.0.0",
+  "author": "satuevsky <satuevsky@gmail.com>",
   "license": "MIT",
-  "repository": "expressjs/serve-static",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Borcuhhha/serve-static-with-cache.git"
+  },
   "dependencies": {
     "compression": "^1.6.2",
     "encodeurl": "~1.0.1",
@@ -12,28 +15,11 @@
     "parseurl": "~1.3.1",
     "send": "0.14.1"
   },
-  "devDependencies": {
-    "eslint": "2.11.1",
-    "eslint-config-standard": "5.3.1",
-    "eslint-plugin-promise": "1.3.2",
-    "eslint-plugin-standard": "1.3.2",
-    "istanbul": "0.4.5",
-    "mocha": "2.5.3",
-    "supertest": "1.1.0"
-  },
   "files": [
     "cache/index.js",
-    "LICENSE",
-    "HISTORY.md",
     "index.js"
   ],
   "engines": {
     "node": ">= 0.8.0"
-  },
-  "scripts": {
-    "lint": "eslint .",
-    "test": "mocha --reporter spec --bail --check-leaks test/",
-    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/",
-    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/"
   }
 }
