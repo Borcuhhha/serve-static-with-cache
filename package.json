@@ -1,7 +1,7 @@
 {
   "name": "serve-static-with-cache",
   "description": "Serve static files+cache",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "satuevsky <satuevsky@gmail.com>",
   "license": "MIT",
   "repository": {

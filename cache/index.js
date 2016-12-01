@@ -15,7 +15,7 @@ module.exports = function(){
             //setting headers
             for(var header in cached.headers) res.setHeader(header, cached.headers[header]);
             //writing data
-            for(var i = 0; i < cached.chunksData.length - 1; i++){
+            for(var i = 0; i < cached.chunksData.length; i++){
                 var chunkData = cached.chunksData[i];
                 res.write(chunkData[0], chunkData[1]);
             }
