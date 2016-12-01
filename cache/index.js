@@ -34,7 +34,7 @@ module.exports = function(opts){
             res.write = write;
             res.end = end;
             //set compression middleware
-            compressionMiddleware(req, res, emptyFunc());
+            compressionMiddleware(req, res, emptyFunc);
         }
 
         return {
