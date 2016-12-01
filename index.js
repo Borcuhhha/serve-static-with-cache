@@ -17,6 +17,7 @@ var encodeUrl = require('encodeurl')
 var escapeHtml = require('escape-html')
 var parseUrl = require('parseurl')
 var resolve = require('path').resolve
+var cache = require('./cache');
 var send = require('send')
 var url = require('url')
 
@@ -47,6 +48,8 @@ function serveStatic (root, options) {
   // copy options object
   var opts = Object.create(options || null)
 
+  var cacheMiddleware = cache(opts)
+
   // fall-though
   var fallthrough = opts.fallthrough !== false
 
@@ -70,6 +73,10 @@ function serveStatic (root, options) {
     : createNotFoundDirectoryListener()
 
   return function serveStatic (req, res, next) {
+    var result = cacheMiddleware(req, res, next);
+    if(result.isCached) return;
+    next = result.next;
+
     if (req.method !== 'GET' && req.method !== 'HEAD') {
       if (fallthrough) {
         return next()
