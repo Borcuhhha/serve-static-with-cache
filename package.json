@@ -1,5 +1,5 @@
 {
-  "name": "serve-static",
+  "name": "serve-static-with-cache",
   "description": "Serve static files",
   "version": "1.11.1",
   "author": "Douglas Christopher Wilson <doug@somethingdoug.com>",
