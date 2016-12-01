@@ -22,6 +22,7 @@
     "supertest": "1.1.0"
   },
   "files": [
+    "cache/index.js",
     "LICENSE",
     "HISTORY.md",
     "index.js"
