@@ -15,6 +15,6 @@ $ npm install serve-static-with-cache
 
 ```js
 var cachedServeStatic = require('serve-static-with-cache');
-express.use(cachedServeStatic(pathToStaticFiles));
+express.use(cachedServeStatic("path/to/static/files/root"));
 ```
 
